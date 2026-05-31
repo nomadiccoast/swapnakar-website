@@ -1,0 +1,6 @@
+{
+  "name": "Swapnakar Architecture",
+  "description": "Premium multi-page portfolio website for Swapnakar Architectural and Interior Design Solution, Vastu Consultant in Prayagraj.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
