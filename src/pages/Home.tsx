@@ -170,7 +170,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-base md:text-lg text-mid-grey font-sans max-w-lg leading-relaxed"
           >
-            Premium architectural, interior, Vaastu and planning solutions, inspired by the confluence of Sangam at Allahabad, established in 2003.
+            Premium architectural, interior, Vaastu and planning solutions, inspired by the confluence of Sangam at Allahabad, established in 2000.
           </motion.p>
 
           <motion.div
