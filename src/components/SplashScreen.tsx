@@ -25,7 +25,7 @@ export function SplashScreen({ onFinished }: SplashScreenProps) {
   const hasFinished = useRef(false);
   const isPortrait = useIsPortrait();
 
-  const videoSrc = isPortrait ? '/splash-portrait.mp4' : '/splash.mp4';
+  const videoSrc = isPortrait ? './splash-portrait.mp4' : './splash.mp4';
 
   const finish = useCallback(() => {
     if (hasFinished.current) return;

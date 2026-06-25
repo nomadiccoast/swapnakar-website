@@ -128,19 +128,21 @@ export default function About() {
             </p>
             
             <p>
-              Swapnakar is a confluence of "Dream", "Architect" and "Innovation" realising in a structure that caters as home, institution, complexes, townships etc. The idea of confluence has been derived from a great phenomenon of "Sangam' at Allahabad.
+              Swapnakar is a confluence of "Dream", "Architect" and "Innovation", realising structures that cater as homes, institutions, complexes, townships, etc. The idea of this confluence has been derived from the great phenomenon of "Sangam" at Allahabad.
             </p>
             
             <p>
-              Established in 2003, Swapnakar is committed to maintain high values and quality. The non-negotiable attribute of Swapnakar is  shaping the dreams of clients to the maximum possible. Although the principles of Architect, Vaastu, Safety and Interior Designing are always been an integrated part of any assignment.
+              Established in 2000, Swapnakar is committed to maintaining high values and quality. The non-negotiable attribute of Swapnakar is shaping the dreams of clients to the maximum possible extent. The principles of Architecture, Vaastu, Safety and Interior Designing have always been an integrated part of every assignment.</p>
+
+            <p>
+              After a long journey since 2000, we are now positioned among the leading architectural practitioners. Institutional, residential, educational, commercial, hospitality, leisure and healthcare projects are part of our overall portfolio.
             </p>
 
             <p>
-              After a long journey of more than 12 years, we are now positioned among the leading architectural practitioners. Institutional architecture, residential, educational, commercial, hospitality, leisure and healthcare projects are part of our overall portfolio. Swapnakar is a team of experienced professionals having in-depth understanding of the subject and absolute command over work, which ultimately leaves the clients with 'Zero' queries.
-            </p>
+              Swapnakar is a team of experienced professionals having an in-depth understanding of the subject and absolute command over their work, which ultimately leaves clients with "Zero" queries. </p>
 
-            <p>
-              We know to manage space, bring comfort and creating appeal in designs within the limits of resources available with clients. The equation between clients' need and luxury is always balanced and satisfied in the architectural solution provided by Swapnakar.
+ <p>
+              We know how to manage space, bring comfort and create appealing designs within the limits of the resources available with clients. The equation between clients' needs and luxury is always balanced and satisfied in the architectural solutions provided by Swapnakar.
             </p>
 
             <p className="text-[#1C1C1C] font-serif italic">

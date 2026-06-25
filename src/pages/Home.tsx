@@ -46,7 +46,7 @@ const SERVICES_DATA: Service[] = [
     title: "Vaastu Consultants",
     description: "Peace of mind, happiness of heart and prosperity is sought by everyone. Swapnakar specialty in Vaastu makes its project unique in its class.",
     details: [],
-    image: "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000&h=700"
   },
   {
     id: "landscape-designing",
@@ -59,77 +59,36 @@ const SERVICES_DATA: Service[] = [
 
 const PROJECTS_DATA: Project[] = [
   {
-    id: "civil-lines-villa",
-    title: "The Grand Civil Lines Estate",
+    id: "Hero-1",
+    title: "Prayagraj Township",
     category: "Residential",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
+      "./hero/1.jpg",
+      ],
     description: "A luxury multi-generational residence in the heart of Civil Lines, featuring high soaring ceilings, custom carved jaali screens, and complete Vastu compliance.",
     location: "Civil Lines, Prayagraj",
     year: "2024"
   },
   {
-    id: "high-street-retail",
-    title: "Avant-Garde Commercial Hub",
-    category: "Commercial",
+    id: "Hero-2",
+    title: "Residence",
+    category: "Residential",
     images: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "A modern commercial plaza with dynamic glazing elements designed for maximum footfall, premium tenant spaces, and energy-efficient climate control systems.",
-    location: "Katra High Street, Prayagraj",
-    year: "2023"
-  },
-  {
-    id: "sangam-retreat",
-    title: "The Riverscape Wellness Resort",
-    category: "Institutional",
-    images: [
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "An institutional wellness center aligned to the sunrise axis. Incorporating quiet meditation courtyards, green roofs, and passive cooling stone facades.",
-    location: "Sangam Coastline, Prayagraj",
-    year: "2025"
-  },
-  {
-    id: "minimalist-penthouse",
-    title: "The Monochrome Sky Penthouse",
-    category: "Interior Design",
-    images: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "A sleek interior design concept featuring premium Italian marble surfaces, smart concealed automation, custom built brass panels, and modular kitchen suites.",
-    location: "George Town, Prayagraj",
+      "./hero/2.jpg",
+      ],
+    description: "A luxury multi-generational residence in the heart of Civil Lines, featuring high soaring ceilings, custom carved jaali screens, and complete Vastu compliance.",
+    location: "Chaak Ghaat, Rewa",
     year: "2024"
   },
   {
-    id: "tagore-town-mansion",
-    title: "Classical Colonial Manor",
+    id: "Hero-3",
+    title: "Shringverpur Township",
     category: "Residential",
     images: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "Reviving vintage colonial aesthetics in Tagore Town. Spanning large wraparound verandas, premium teakwood doorways, and lush structural gardens.",
-    location: "Tagore Town, Prayagraj",
-    year: "2023"
-  },
-  {
-    id: "creative-office-loft",
-    title: "Synergy Creative Workspace",
-    category: "Interior Design",
-    images: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "An open workspace featuring custom interactive breakout desks, acoustically insulated phone booths, and vibrant vertical planting panels.",
-    location: "Civil Lines Corporate Hub, Prayagraj",
+      "./hero/3.jpg",
+      ],
+    description: "A luxury multi-generational residence in the heart of Civil Lines, featuring high soaring ceilings, custom carved jaali screens, and complete Vastu compliance.",
+    location: "Shringverpur, Prayagraj",
     year: "2024"
   }
 ];
@@ -161,8 +120,8 @@ export default function Home() {
   const heroHeadingText = "Dream. Architect. Innovate.";
   const words = heroHeadingText.split(" ");
 
-  // Take first 3 projects for the asymmetric grid
-  const featuredProjects = PROJECTS_DATA.slice(0, 3);
+  // Use projects for the asymmetric grid
+  const featuredProjects = PROJECTS_DATA;
 
   return (
     <motion.div
@@ -211,7 +170,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-base md:text-lg text-mid-grey font-sans max-w-lg leading-relaxed"
           >
-            Premium architectural, interior, Vaastu and planning solutions — inspired by the confluence of Sangam at Allahabad, established in 2003.
+            Premium architectural, interior, Vaastu and planning solutions, inspired by the confluence of Sangam at Allahabad, established in 2003.
           </motion.p>
 
           <motion.div
@@ -246,13 +205,15 @@ export default function Home() {
           >
             <div className="absolute inset-0 border-l-[4px] border-gold z-10 pointers-none" />
             
-            {/* SWAP IMAGE: hero main project photo */}
-            <img
-              src={IMAGES.heroMain}
-              alt="Swapnakar Premium Architecture Masterwork"
-              width={1200}
-              height={1600}
-              loading="lazy"
+            {/* SWAP VIDEO: hero main project video */}
+            <video
+              src="./hero_video.mp4"
+              poster={IMAGES.heroMain}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
               className="w-full h-full object-cover shadow-none select-none transition-transform duration-500 hover:scale-[1.01]"
             />
           </motion.div>
@@ -437,7 +398,13 @@ export default function Home() {
                 variants={fadeInUp}
                 className="lg:col-span-7 flex flex-col group"
               >
-                <div className="relative w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden bg-white border border-transparent group-hover:border-gold transition-all duration-300">
+                <div className="relative w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden bg-white border border-transparent group-hover:border-gold transition-all duration-300 flex items-center justify-center">
+                  {/* Blurred background */}
+                  <img
+                    src={featuredProjects[0].images[0]}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-50 z-0 pointer-events-none"
+                  />
                   {/* SWAP IMAGE: Featured large project photo */}
                   <img
                     src={featuredProjects[0].images[0]}
@@ -445,9 +412,9 @@ export default function Home() {
                     width={1200}
                     height={800}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                    className="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
                   />
-                  <div className="absolute top-4 left-4 bg-pure-black text-white px-3 py-1 text-[10px] font-sans tracking-widest uppercase font-bold">
+                  <div className="absolute top-4 left-4 bg-pure-black text-white px-3 py-1 text-[10px] font-sans tracking-widest uppercase font-bold z-20">
                     {featuredProjects[0].category}
                   </div>
                 </div>
@@ -472,7 +439,13 @@ export default function Home() {
                   variants={fadeInUp}
                   className="flex flex-col group"
                 >
-                  <div className="relative w-full aspect-[16/10] overflow-hidden bg-white border border-transparent group-hover:border-gold transition-all duration-300">
+                  <div className="relative w-full aspect-[16/10] overflow-hidden bg-white border border-transparent group-hover:border-gold transition-all duration-300 flex items-center justify-center">
+                    {/* Blurred background */}
+                    <img
+                      src={project.images[0]}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-50 z-0 pointer-events-none"
+                    />
                     {/* SWAP IMAGE: Featured project photo */}
                     <img
                       src={project.images[0]}
@@ -480,9 +453,9 @@ export default function Home() {
                       width={1200}
                       height={800}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                      className="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
                     />
-                    <div className="absolute top-4 left-4 bg-pure-black text-white px-3 py-1 text-[10px] font-sans tracking-widest uppercase font-bold">
+                    <div className="absolute top-4 left-4 bg-pure-black text-white px-3 py-1 text-[10px] font-sans tracking-widest uppercase font-bold z-20">
                       {project.category}
                     </div>
                   </div>

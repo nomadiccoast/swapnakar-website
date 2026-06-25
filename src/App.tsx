@@ -16,10 +16,18 @@ import { SplashScreen } from "./components/SplashScreen";
 import Home from "./pages/Home";
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !localStorage.getItem("swapnakar_splash_shown");
+    }
+    return true;
+  });
 
   const handleSplashFinished = useCallback(() => {
     setShowSplash(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("swapnakar_splash_shown", "true");
+    }
   }, []);
 
   return (

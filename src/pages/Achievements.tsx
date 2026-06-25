@@ -11,52 +11,9 @@ import { Achievement } from "../types";
 
 // EDIT CONTENT: all images and text for this component are here
 const ACHIEVEMENTS_DATA: Achievement[] = [
-  {
-    id: "ach-1",
-    year: "2024",
-    title: "Best Luxury Architect Award",
-    description: "Honored with the Prayagraj Architecture Excellence Trophy for outstanding contribution in premium residential exterior structures."
-  },
-  {
-    id: "ach-2",
-    year: "2023",
-    title: "300+ Successful Deliveries",
-    description: "Successfully handed over keys to over 300 premium commercial projects, corporate hubs, and bespoke homes across India on schedule."
-  },
-  {
-    id: "ach-3",
-    year: "2022",
-    title: "Eco-Responsive Pioneer",
-    description: "Recognized as a regional champion for integration of solar active layouts and passive stone-cooling facades in institutional structures."
-  },
-  {
-    id: "ach-4",
-    year: "2020",
-    title: "Vastu Integration Landmark",
-    description: "Successfully finalized complete Vastu consulting designs for a 50-acre wellness spiritual retreat without demanding structural demolition."
-  },
-  {
-    id: "ach-5",
-    year: "2018",
-    title: "Best Commercial Plaza Design",
-    description: "Awarded premium distinction for Katra commercial arcade project, highlighting high light pathing and organic floor circulation."
-  },
-  {
-    id: "ach-6",
-    year: "2015",
-    title: "Over a Decade of Excellence",
-    description: "Milestone commemorating 10 continuous years of shaping the Civil Lines cityscape and architectural planning of UP."
-  }
+  
+ 
 ];
-
-const IMAGES = {
-  gallery1: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800&h=600",
-  gallery2: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800&h=600",
-  gallery3: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=800&h=600",
-  gallery4: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800&h=600",
-  gallery5: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800&h=600",
-  gallery6: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800&h=600",
-};
 
 // Animations
 const containerVariants = {
@@ -79,52 +36,88 @@ const cardVariants = {
 };
 
 export default function Achievements() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [isPlayingReel, setIsPlayingReel] = useState(false);
-
   // Gallery array
-  const galleryPhotos = [
-    { src: IMAGES.gallery1, caption: "Inauguration ceremony of Civil Lines landmark plaza" },
-    { src: IMAGES.gallery2, caption: "Consultation and design session with Ar. Santosh Swapnakar" },
-    { src: IMAGES.gallery3, caption: "Vastu calibration onsite for luxury Prayagraj villa" },
-    { src: IMAGES.gallery4, caption: "Reviewing timber wood select panels for modular interior design" },
-    { src: IMAGES.gallery5, caption: "Structural slab casting inspection under Project Management" },
-    { src: IMAGES.gallery6, caption: "Handing over finalized turnkey penthouse in George Town" },
+  const galleryPhotos: { src: string | string[]; caption: string }[] = [
+    {
+      src: [
+        "./ach/M.jpg",
+        "./ach/M1.jpg",
+        "./ach/M2.jpg",
+        "./ach/M3.mp4" // The video file (extension must be .mp4, .webm, or .mov)
+      ], 
+      caption: "India's Most Prominent Architect and Design Award by MAMR" 
+    },
+   {
+      src: [
+        "./ach/G.jpg",
+             ], 
+      caption: "Award" 
+    },
+    {
+      src: [
+        "./ach/K.jpg",
+             ], 
+      caption: "Award" 
+    },
+    {
+      src: [
+        "./ach/L.jpg",
+             ], 
+      caption: "Award" 
+    },
+    
+    
+   
   ];
+
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [activeMediaIndex, setActiveMediaIndex] = useState<number>(0);
+
+  const isVideo = (src: string) => {
+    if (!src || typeof src !== "string") return false;
+    const path = src.split("?")[0].toLowerCase();
+    return path.endsWith(".mp4") || path.endsWith(".webm") || path.endsWith(".mov") || path.endsWith(".m4v");
+  };
+
+  const getThumbnailSrc = (photo: { src: string | string[]; caption: string }) => {
+    const list = Array.isArray(photo.src) ? photo.src : [photo.src];
+    const firstImage = list.find((item) => !isVideo(item));
+    return firstImage || list[0];
+  };
+
+  const currentPhoto = selectedPhotoIndex !== null ? galleryPhotos[selectedPhotoIndex] : null;
+  const mediaList = currentPhoto
+    ? (Array.isArray(currentPhoto.src) ? currentPhoto.src : [currentPhoto.src])
+    : [];
+  const currentMediaSrc = currentPhoto ? mediaList[activeMediaIndex] : "";
 
   const handleNextPhoto = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!selectedImage) return;
-    const currentIdx = galleryPhotos.findIndex((p) => p.src === selectedImage);
-    const nextIdx = currentIdx === galleryPhotos.length - 1 ? 0 : currentIdx + 1;
-    setSelectedImage(galleryPhotos[nextIdx].src);
+    if (selectedPhotoIndex === null) return;
+    setActiveMediaIndex((prev) => (prev === mediaList.length - 1 ? 0 : prev + 1));
   };
 
   const handlePrevPhoto = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!selectedImage) return;
-    const currentIdx = galleryPhotos.findIndex((p) => p.src === selectedImage);
-    const prevIdx = currentIdx === 0 ? galleryPhotos.length - 1 : currentIdx - 1;
-    setSelectedImage(galleryPhotos[prevIdx].src);
+    if (selectedPhotoIndex === null) return;
+    setActiveMediaIndex((prev) => (prev === 0 ? mediaList.length - 1 : prev - 1));
   };
 
   // Keyboard accessibility
-  useState(() => {
+  React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!selectedImage) return;
-      if (e.key === "Escape") setSelectedImage(null);
+      if (selectedPhotoIndex === null) return;
+      if (e.key === "Escape") setSelectedPhotoIndex(null);
       if (e.key === "ArrowRight") {
-        const currentIdx = galleryPhotos.findIndex((p) => p.src === selectedImage);
-        setSelectedImage(galleryPhotos[currentIdx === galleryPhotos.length - 1 ? 0 : currentIdx + 1].src);
+        setActiveMediaIndex((prev) => (prev === mediaList.length - 1 ? 0 : prev + 1));
       }
       if (e.key === "ArrowLeft") {
-        const currentIdx = galleryPhotos.findIndex((p) => p.src === selectedImage);
-        setSelectedImage(galleryPhotos[currentIdx === 0 ? galleryPhotos.length - 1 : currentIdx - 1].src);
+        setActiveMediaIndex((prev) => (prev === 0 ? mediaList.length - 1 : prev - 1));
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  });
+  }, [selectedPhotoIndex, mediaList.length]);
 
   return (
     <motion.div
@@ -230,16 +223,25 @@ export default function Achievements() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
                 className="group relative cursor-pointer overflow-hidden aspect-[4/3] bg-white border border-transparent hover:border-gold transition-all duration-300"
-                onClick={() => setSelectedImage(photo.src)}
+                onClick={() => {
+                  setSelectedPhotoIndex(idx);
+                  setActiveMediaIndex(0);
+                }}
               >
-                {/* SWAP IMAGE: Each gallery photo */}
+                {/* Blurred background glow */}
                 <img
-                  src={photo.src}
+                  src={getThumbnailSrc(photo)}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-50 select-none pointer-events-none"
+                />
+                {/* Sharp foreground image */}
+                <img
+                  src={getThumbnailSrc(photo)}
                   alt={photo.caption}
                   width={800}
                   height={600}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                  className="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
                 />
 
                 {/* Cover overlay on hover */}
@@ -258,23 +260,21 @@ export default function Achievements() {
         </div>
       </section>
 
-    
-
       {/* PHOTO LIGHTBOX MODAL */}
       <AnimatePresence>
-        {selectedImage && (
+        {selectedPhotoIndex !== null && currentPhoto && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-[#0A0A0ACC] backdrop-blur-md flex flex-col justify-between p-6 md:p-12"
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedPhotoIndex(null)}
           >
             {/* Header */}
             <div className="flex items-center justify-between w-full text-white">
               <span className="font-serif text-lg font-bold">MOMENTS &amp; MILESTONES GALLERY</span>
               <button
-                onClick={() => setSelectedImage(null)}
+                onClick={() => setSelectedPhotoIndex(null)}
                 className="p-3 bg-white/10 hover:bg-gold text-white hover:text-black rounded-none transition-all focus:outline-none"
                 aria-label="Close Lightbox"
               >
@@ -285,36 +285,63 @@ export default function Achievements() {
             {/* Selector Slider body */}
             <div className="my-auto relative max-w-4xl mx-auto w-full flex items-center justify-center p-4">
               
-              <button
-                onClick={handlePrevPhoto}
-                className="absolute left-0 md:-left-12 z-10 p-3 bg-white/10 hover:bg-gold hover:text-black text-white rounded-none transition-all"
-                aria-label="Previous Photo"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
+              {mediaList.length > 1 && (
+                <button
+                  onClick={handlePrevPhoto}
+                  className="absolute left-0 md:-left-12 z-10 p-3 bg-white/10 hover:bg-gold hover:text-black text-white rounded-none transition-all"
+                  aria-label="Previous Photo"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+              )}
 
-              <div className="bg-pure-black max-h-[65vh] aspect-video w-full overflow-hidden flex items-center justify-center">
-                <img
-                  src={selectedImage}
-                  alt="Enlarged Milestone Moment"
-                  className="max-w-full max-h-full object-contain"
-                />
+              <div className="bg-pure-black max-h-[65vh] aspect-video w-full overflow-hidden flex items-center justify-center relative">
+                {isVideo(currentMediaSrc) ? (
+                  <video
+                    src={currentMediaSrc}
+                    controls
+                    playsInline
+                    className="relative z-10 max-w-full max-h-full object-contain"
+                  />
+                ) : (
+                  <>
+                    {/* Blurred background glow */}
+                    <img
+                      src={currentMediaSrc}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 select-none pointer-events-none"
+                    />
+                    {/* Sharp foreground image */}
+                    <img
+                      src={currentMediaSrc}
+                      alt={currentPhoto.caption}
+                      className="relative z-10 max-w-full max-h-full object-contain"
+                    />
+                  </>
+                )}
+                {mediaList.length > 1 && (
+                  <div className="absolute bottom-4 left-4 bg-pure-black/80 px-3 py-1 font-sans text-[11px] text-[#C4C4C2] rounded-none tracking-widest z-10">
+                    {activeMediaIndex + 1} / {mediaList.length}
+                  </div>
+                )}
               </div>
 
-              <button
-                onClick={handleNextPhoto}
-                className="absolute right-0 md:-right-12 z-10 p-3 bg-white/10 hover:bg-gold hover:text-black text-white rounded-none transition-all"
-                aria-label="Next Photo"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
+              {mediaList.length > 1 && (
+                <button
+                  onClick={handleNextPhoto}
+                  className="absolute right-0 md:-right-12 z-10 p-3 bg-white/10 hover:bg-gold hover:text-black text-white rounded-none transition-all"
+                  aria-label="Next Photo"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              )}
 
             </div>
 
             {/* Footer Captions */}
             <div className="max-w-2xl mx-auto w-full text-white text-center">
               <p className="text-sm font-sans text-mid-grey">
-                {galleryPhotos.find((p) => p.src === selectedImage)?.caption || "Milestone moment document"}
+                {currentPhoto.caption}
               </p>
             </div>
 

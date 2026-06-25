@@ -10,38 +10,92 @@ import { TeamMember } from "../types";
 const TEAM_DATA: TeamMember[] = [
   {
     id: "team-1",
-    name: "Ar. Santosh Swapnakar",
+    name: "Ar. Vishal Chandra Khare",
     designation: "PRINCIPAL ARCHITECT & FOUNDER",
-    description: "Over 15 years of rich architectural design expertise cataloging major premium commercial structures and private luxury townships across Uttar Pradesh.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300&h=300"
+    description: ".",
+    image: "./PHOTOS/vishal.jpg",
+    imageOffset: { x: "0px", y: "0px", scale: 1.05, position: "top" }
   },
   {
     id: "team-2",
-    name: "Ar. Shruti Mishra",
-    designation: "SENIOR ARCHITECTURAL DESIGNER",
+    name: "Jaya Khare",
+    designation: "DIRECTOR",
     description: "Specializing in high-performance urban master planning layouts. Spearheading innovative facade geometries and passive climate building models.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=300"
+    image: "./PHOTOS/jaya.jpg",
+    imageOffset: { x: "0px", y: "0px", scale: 1.05, position: "top" }
   },
   {
     id: "team-3",
-    name: "Aditya Srivastava",
-    designation: "DIRECTOR OF INTERIOR EXPERTIZE",
+    name: "Nidhi Kesarwani",
+    designation: "Interior Designer",
     description: "Devoted to luxury spatial experiences, custom textile curations, and material research that infuses comfort into high modernist aesthetics.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300&h=300"
-  },
-  {
-    id: "team-4",
-    name: "Pt. Ramesh Chand Shastri",
-    designation: "SENIOR VASTU CONSULTANT",
-    description: "A highly respected scholar advising on directional energy rules, magnetic axis calibration, and traditional spatial alignment formulas.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300&h=300"
+    image: "./PHOTOS/nidhi.jpeg",
+    imageOffset: { x: "8px", y: "0px", scale: 1.05 }
   },
   {
     id: "team-5",
-    name: "Er. Vivek Kushwaha",
-    designation: "HEAD OF CONSTRUCTION & PROJECT MGMT",
+    name: "Arshad Khan",
+    designation: "Civil Engineer & Drafter",
+    description: "A highly respected scholar advising on directional energy rules, magnetic axis calibration, and traditional spatial alignment formulas.",
+    image: "./PHOTOS/arshad.jpg",
+    imageOffset: { x: "0px", y: "15px", scale: 1.2, position: "top" }
+  },
+  {
+    id: "team-4",
+    name: "ER. Sanjeev Mishra",
+    designation: "Civil Engineer",
     description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
-    image: "./media/download.png"
+    image: "./PHOTOS/sanjeev.jpeg",
+    imageOffset: { x: "0px", y: "0px", scale: 1.05, position: "top" }
+  },
+  {
+    id: "team-6",
+    name: "Ajay Maurya",
+    designation: "Site Engineer",
+    description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
+    image: "./PHOTOS/ajay.jpeg",
+    imageOffset: { x: "0px", y: "0px", scale: 1.1, position: "top" }
+  },
+  {
+    id: "team-7",
+    name: "Shree Kant Kushwaha",
+    designation: "3D Visualizer",
+    description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
+    image: "./PHOTOS/shri.jpg",
+    imageOffset: { x: "0px", y: "15px", scale: 1.25, position: "top" }
+  },
+  
+  {
+    id: "team-9",
+    name: "Mohammad Umar",
+    designation: "Estimator & Development Authority Work",
+    description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
+    image: "./PHOTOS/umar.jpeg",
+    imageOffset: { x: "0px", y: "15px", scale: 1.2, position: "top" }
+  },
+  {
+    id: "team-10",
+    name: "Chandra Deep Prajapati",
+    designation: "Structural Engineer",
+    description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
+    image: "./PHOTOS/chandra.jpeg",
+    imageOffset: { x: "15px", y: "-15px", scale: 1.2, position: "top" }
+  },
+  {
+    id: "team-11",
+    name: "Saif Ullah",
+    designation: "Interior Designer",
+    description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
+    image: "./PHOTOS/saif.jpeg",
+    imageOffset: { x: "0px", y: "-10px", scale: 1.2, position: "top" }
+  },
+  {
+    id: "team-12",
+    name: "Arvind Sharma",
+    designation: "Interior Decorator",
+    description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
+    image: "./PHOTOS/arvind.jpg",
+    imageOffset: { x: "0px", y: "-10px", scale: 1.05 }
   }
 ];
 
@@ -66,6 +120,45 @@ const itemVariants = {
 };
 
 export default function Team() {
+  const row1 = TEAM_DATA.filter(m => ["team-1", "team-2"].includes(m.id));
+  const row2 = TEAM_DATA.filter(m => ["team-4", "team-10", "team-11"].includes(m.id));
+  const row3 = TEAM_DATA.filter(m => ["team-3", "team-5", "team-6"].includes(m.id));
+  const row4 = TEAM_DATA.filter(m => ["team-7", "team-9", "team-12"].includes(m.id));
+
+  const renderMemberCard = (member: TeamMember) => (
+    <motion.div
+      key={member.id}
+      variants={itemVariants}
+      className="flex flex-col items-center text-center group w-64"
+    >
+      {/* Circular Avatar 160px diameter (w-40 h-40 is exactly 160px) */}
+      <div className="relative w-40 h-40 rounded-full overflow-hidden mb-6 bg-warm-grey border border-transparent group-hover:border-gold transition-all duration-300">
+        {/* SWAP IMAGE: team member photo */}
+        <img
+          src={member.image}
+          alt={`${member.name} - ${member.designation}`}
+          width={160}
+          height={160}
+          loading="lazy"
+          className="w-full h-full object-cover transition-all duration-500"
+          style={{
+            transform: `translate(${member.imageOffset?.x || "0px"}, ${member.imageOffset?.y || "0px"}) scale(${member.imageOffset?.scale || 1})`,
+            objectPosition: member.imageOffset?.position || "center"
+          }}
+        />
+      </div>
+
+      {/* EDIT TEXT: Member name & roles */}
+      <h3 className="font-serif text-2xl text-[#1C1C1C] font-bold mb-1 group-hover:text-gold transition-colors duration-300">
+        {member.name}
+      </h3>
+      
+      <span className="text-[11px] font-sans text-gold uppercase tracking-[0.2em] font-extrabold mb-3 select-none">
+        {member.designation}
+      </span>
+    </motion.div>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -90,46 +183,32 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Team layout grid. 3 columns desktop, 2 columns tablet, 1 column mobile */}
+        {/* Grouped Team Rows */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 xl:gap-x-16"
+          className="flex flex-col space-y-20 md:space-y-24"
         >
-          {TEAM_DATA.map((member) => (
-            <motion.div
-              key={member.id}
-              variants={itemVariants}
-              className="flex flex-col items-center text-center group"
-            >
-              {/* Circular Avatar 160px diameter (w-40 h-40 is exactly 160px) */}
-              <div className="relative w-40 h-40 rounded-full overflow-hidden mb-6 bg-warm-grey border border-transparent group-hover:border-gold transition-all duration-300">
-                {/* SWAP IMAGE: team member photo */}
-                <img
-                  src={member.image}
-                  alt={`${member.name} - ${member.designation}`}
-                  width={160}
-                  height={160}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-500"
-                />
-              </div>
+          {/* Row 1: Leadership (Vishal and Jaya centered at top) */}
+          <div className="flex flex-wrap justify-center gap-12 lg:gap-16">
+            {row1.map((member) => renderMemberCard(member))}
+          </div>
 
-              {/* EDIT TEXT: Member name & roles */}
-              <h3 className="font-serif text-2xl text-[#1C1C1C] font-bold mb-1 group-hover:text-gold transition-colors duration-300">
-                {member.name}
-              </h3>
-              
-              <span className="text-[11px] font-sans text-gold uppercase tracking-[0.2em] font-extrabold mb-3 select-none">
-                {member.designation}
-              </span>
+          {/* Row 2: Design Leads (3 members below them) */}
+          <div className="flex flex-wrap justify-center gap-12 lg:gap-16">
+            {row2.map((member) => renderMemberCard(member))}
+          </div>
 
-              <p className="text-sm font-sans text-mid-grey max-w-xs leading-relaxed">
-                {member.description}
-              </p>
-            </motion.div>
-          ))}
+          {/* Row 3: Civil & Site Engineers */}
+          <div className="flex flex-wrap justify-center gap-12 lg:gap-16">
+            {row3.map((member) => renderMemberCard(member))}
+          </div>
+
+          {/* Row 4: Engineering & Technical Support */}
+          <div className="flex flex-wrap justify-center gap-12 lg:gap-16">
+            {row4.map((member) => renderMemberCard(member))}
+          </div>
         </motion.div>
 
       </div>

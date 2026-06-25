@@ -48,7 +48,7 @@ const SERVICES_DATA: Service[] = [
     title: "Vaastu Consultants",
     description: "Peace of mind, happiness of heart and prosperity is sought by everyone. The environment today where there is a rush of time, the Vaastu elements bring some miraculous effects to ones living. Swapnakar specialty in Vaastu makes its project unique in its class.",
     details: [],
-    image: "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000&h=700"
   },
   {
     id: "landscape-designing",

@@ -11,90 +11,757 @@ import { Project } from "../types";
 // EDIT CONTENT: all images and text for this component are here
 const PROJECTS_DATA: Project[] = [
   {
-    id: "civil-lines-villa",
-    title: "The Grand Civil Lines Estate",
-    category: "Residential",
+    id: "hotel 1",
+    title: "Hotel Heaven View",
+    category: "Commercial",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200&h=800"
+      "./COMMERCIAL/hotel_1.jpg",
+      "./COMMERCIAL/hotel_2.jpg",
     ],
-    description: "A luxury multi-generational residence in the heart of Civil Lines, featuring high soaring ceilings, custom carved jaali screens, and complete Vastu compliance.",
+    description: "Hotel",
+    location: "Gopiganj,Bhadohi",
+    year: "2022",
+  },
+   {
+    id: "hotel_jssp",
+    title: "Jai Shree Sarovar",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/jssp1.jpg",
+      "./COMMERCIAL/jssp2.jpg",
+    ],
+    description: "Hotel",
+    location: "Manjhan pur,Kausambhi",
+    year: "2026"
+  },
+  {
+    id: "sports-club",
+    title: "Prayagraj Sports CLub",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/sports-club.jpg",
+      "./COMMERCIAL/sports-club1.jpg",
+    ],
+    description: "Sports Club",
     location: "Civil Lines, Prayagraj",
     year: "2024"
   },
+   
   {
-    id: "high-street-retail",
-    title: "Avant-Garde Commercial Hub",
+    id: "panchsheel-hotel",
+    title: "Hotel Panchsheel",
     category: "Commercial",
     images: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=800"
+      "./COMMERCIAL/hotel-panchsheel.jpg",
+      "./COMMERCIAL/hotel-panchsheel1.jpg",
     ],
-    description: "A modern commercial plaza with dynamic glazing elements designed for maximum footfall, premium tenant spaces, and energy-efficient climate control systems.",
-    location: "Katra High Street, Prayagraj",
+    description: "Hotel",
+    location: "Ayodhya",
+    year: "2026"
+  },
+  {
+    id: "bharvari",
+    title: "Hotel Bharavari",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/bharvari-hotel.jpg",
+      "./COMMERCIAL/bharvari-hotel1.jpg",
+    ],
+    description: "Hotel",
+    location: "Kausambhi",
+    year: "2025"
+  },
+  {
+    id: "vitthal-hotel",
+    title: "Hotel Vitthal",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/hotel-vitthal.jpg",
+    ],
+    description: "Hotel",
+    location: "Prayagraj",
+    year: "2015"
+  },
+   {
+    id: "complex",
+    title: "Commercial Complex",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/complex.jpg",
+    ],
+    description: "Commercial Complex",
+    location: "Prayagraj",
+    year: "2019"
+  },
+  {
+    id: "hotel-rosewood",
+    title: "Rosewood Hotel",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/hotel-rosewood.jpg",
+    ],
+    description: "Hotel",
+    location: "Prayagraj",
+    year: "2021"
+  },
+  {
+    id: "emerald-complex",
+    title: "Commercial Complex",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/emerald-complex.jpg",
+    ],
+    description: "Commercial Complex",
+    location: "Prayagraj",
+    year: "2026"
+  },
+  {
+    id: "comm-complex",
+    title: "Commercial Complex",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/comm-complex.jpg",
+    ],
+    description: "Commercial Complex",
+    location: "Karchana,Prayagraj",
+    year: "2026"
+  },
+  {
+    id: "hospital-parikh",
+    title: "Parikh Hospital",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/parikh-hospital.jpg",
+    ],
+    description: "Parikh Hospital",
+    location: "Prayagraj",
+    year: "2019"
+  },
+  {
+    id: "mill",
+    title: "Floor Mill",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/mill0.jpg",
+      "./COMMERCIAL/mill1.jpeg",
+      "./COMMERCIAL/mill2.jpeg",
+      "./COMMERCIAL/mill3.jpeg",
+      "./COMMERCIAL/mill4.jpeg",
+    ],
+    description: "Floor Mill",
+    location: "Chunaar",
+    year: "2020"
+  },
+  {
+    id: "guest-house",
+    title: "Guest House",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/guest-house.jpg",
+    ],
+    description: "Guest House",
+    location: "Prayagraj",
     year: "2023"
   },
   {
-    id: "sangam-retreat",
-    title: "The Riverscape Wellness Resort",
+    id: "hotel-golden",
+    title: "Golden Hotel",
+    category: "Commercial",
+    images: [
+      "./COMMERCIAL/hotel-golden.jpg",
+    ],
+    description: "Golden Hotel",
+    location: "Naini Prayagraj",
+    year: "2023"
+  },
+  {
+    id: "Institutional-1",
+    title: "CBSE School",
     category: "Institutional",
     images: [
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "An institutional wellness center aligned to the sunrise axis. Incorporating quiet meditation courtyards, green roofs, and passive cooling stone facades.",
-    location: "Sangam Coastline, Prayagraj",
-    year: "2025"
+      "./INSTITUTIONAL/1.jpg",
+       "./INSTITUTIONAL/2.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
   },
   {
-    id: "prayagraj-airport",
-    title: "The badlands",
-    category: "Residential",
+    id: "Institutional-2",
+    title: "X-EED School and College",
+    category: "Institutional",
     images: [
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "A luxury residential complex in the heart of Prayagraj, featuring high soaring ceilings, custom carved jaali screens, and complete Vastu compliance.",
-    location: "Prayagraj Airport, Prayagraj",
-    year: "2025"
+      "./INSTITUTIONAL/B.jpg",
+      "./INSTITUTIONAL/B1.jpg",
+      "./INSTITUTIONAL/B2.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
   },
+{
+    id: "Institutional-3",
+    title: "CBSE School and College",
+    category: "Institutional",
+    images: [
+      "./INSTITUTIONAL/3.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "Institutional-4",
+    title: "CBSE School",
+    category: "Institutional",
+    images: [
+      "./INSTITUTIONAL/M.png",
+       "./INSTITUTIONAL/M1.png",
+       "./INSTITUTIONAL/M2.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "Institutional-4",
+    title: "School and College",
+    category: "Institutional",
+    images: [
+      "./INSTITUTIONAL/R7.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "Institutional-5",
+    title: "Radhe Shyam Tiwari CBSE School",
+    category: "Institutional",
+    images: [
+      "./INSTITUTIONAL/W.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+
+
   {
-    id: "minimalist-penthouse",
-    title: "The Monochrome Sky Penthouse",
+    id: "1-interior",
+    title: "Office",
     category: "Interior Design",
     images: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "A sleek interior design concept featuring premium Italian marble surfaces, smart concealed automation, custom built brass panels, and modular kitchen suites.",
-    location: "George Town, Prayagraj",
-    year: "2024"
+      "./INTERIOR/1.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
   },
   {
-    id: "tagore-town-mansion",
-    title: "Classical Colonial Manor",
-    category: "Residential",
-    images: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200&h=800"
-    ],
-    description: "Reviving vintage colonial aesthetics in Tagore Town. Spanning large wraparound verandas, premium teakwood doorways, and lush structural gardens.",
-    location: "Tagore Town, Prayagraj",
-    year: "2023"
-  },
-  {
-    id: "creative-office-loft",
-    title: "Synergy Creative Workspace",
+    id: "2-interior",
+    title: "Bar",
     category: "Interior Design",
     images: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200&h=800",
-      "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=1200&h=800"
+      "./INTERIOR/A.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "3-interior",
+    title: "Bedroom",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/B.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "4-interior",
+    title: "Saloon",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/barber-1.jpg",
+      "./INTERIOR/barber-2.jpg",
     ],
-    description: "An open workspace featuring custom interactive breakout desks, acoustically insulated phone booths, and vibrant vertical planting panels.",
-    location: "Civil Lines Corporate Hub, Prayagraj",
-    year: "2024"
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "5-interior",
+    title: "Office",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/C.jpg",
+      "./INTERIOR/C1.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "6-interior",
+    title: "Hall",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/D.jpg",
+      "./INTERIOR/D1.jpg",
+      "./INTERIOR/D2.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "7-interior",
+    title: "Hall",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/di.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "8-interior",
+    title: "Office",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/E.jpg",
+      "./INTERIOR/E1.jpg",
+      "./INTERIOR/E2.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "9-interior",
+    title: "Store",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/I.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "10-interior",
+    title: "Hall",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/K.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "11-interior",
+    title: "Bedroom",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/L.jpg",
+      "./INTERIOR/L1.jpg",
+      "./INTERIOR/L2.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "12-interior",
+    title: "Full Interior",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/M.jpg",
+      "./INTERIOR/M1.jpg",
+      "./INTERIOR/M2.jpg",
+      "./INTERIOR/M3.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "13-interior",
+    title: "Hall",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/O.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "14-interior",
+    title: "Bedroom",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/P.jpg",
+      "./INTERIOR/P1.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "15-interior",
+    title: "Office",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/solar.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "16-interior",
+    title: "Bedroom",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/V2.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "17-interior",
+    title: "Restaurant",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/X.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "18-interior",
+    title: "Full Interior",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/Y.jpg",
+      "./INTERIOR/Y1.jpg",
+      "./INTERIOR/Y2.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "19-interior",
+    title: "Kitchen",
+    category: "Interior Design",
+    images: [
+      "./INTERIOR/Z.jpg",
+      "./INTERIOR/Z1.jpg",
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+
+  {
+    id: "1-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/1.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "2-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/2.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "3-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/3.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "4-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/4.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "5-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/5.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "6-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/6.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "7-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/7.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "8-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/8.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "9-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/9.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "10-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/10.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "11-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/11.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "12-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/12.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "13-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/13.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "14-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/14.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "15-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/15.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "16-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/16.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "17-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/K.jpg",
+     "./RESIDENTIAL/K1.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "18-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/O.jpg",
+     "./RESIDENTIAL/O1.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+  {
+    id: "19-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/P.jpg",
+     "./RESIDENTIAL/P1.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+{
+    id: "20-residential",
+    title: "House",
+    category: "Residential",
+    images: [
+     "./RESIDENTIAL/X.jpg",
+     "./RESIDENTIAL/X1.jpg"
+    ],
+    description: "",
+    location: "",
+    year: ""
+  },
+
+  {
+    id: "temple-1",
+    title: "Temple",
+    category: "Religious",
+    images: [
+      "./religious/1.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "temple-2",
+    title: "Temple",
+    category: "Religious",
+    images: [
+      "./religious/2.png",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "temple-3",
+    title: "Mosque",
+    category: "Religious",
+    images: [
+      "./religious/3.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "temple-4",
+    title: "Temple",
+    category: "Religious",
+    images: [
+      "./religious/4.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "temple-5",
+    title: "Mosque",
+    category: "Religious",
+    images: [
+      "./religious/5.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
+  },
+   {
+    id: "temple-6",
+    title: "Temple",
+    category: "Religious",
+    images: [
+      "./religious/6.jpg",
+      ],
+    description: "",
+    location: "",
+    year: ""
   }
 ];
 
@@ -118,14 +785,14 @@ const cardVariants = {
   },
 };
 
-type CategoryType = "Residential" | "Commercial" | "Institutional" | "Interior Design";
+type CategoryType = "Residential" | "Commercial" | "Institutional" | "Interior Design" | "Religious";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState<CategoryType>("Residential");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
 
-  const tabs: CategoryType[] = ["Residential", "Commercial", "Institutional", "Interior Design"];
+  const tabs: CategoryType[] = ["Residential", "Commercial", "Institutional", "Interior Design" , "Religious"];
 
   // Filter project instances based on active tab selection
   const filteredProjects = PROJECTS_DATA.filter(
@@ -256,8 +923,15 @@ export default function Projects() {
                 onClick={() => openLightbox(project)}
               >
                 {/* Visual Image container with slide hover effects */}
-                <div className={`relative w-full ${aspectClass} overflow-hidden bg-warm-grey border border-transparent group-hover:border-gold transition-all duration-300`}>
+                <div className={`relative w-full ${aspectClass} overflow-hidden bg-warm-grey border border-transparent group-hover:border-gold transition-all duration-300 flex items-center justify-center`}>
                   
+                  {/* Blurred background */}
+                  <img
+                    src={project.images[0]}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-50 z-0 pointer-events-none"
+                  />
+
                   {/* SWAP IMAGE: Each project showcase thumbnail image */}
                   <img
                     src={project.images[0]}
@@ -265,7 +939,7 @@ export default function Projects() {
                     width={1200}
                     height={800}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                    className="relative z-10 w-full h-full object-contain transition-transform duration-500 group-hover:scale-103"
                   />
 
                   {/* Absolute subtle category label */}
@@ -274,7 +948,7 @@ export default function Projects() {
                   </div>
 
                   {/* Premium Slide-Up Title Overlay */}
-                  <div className="absolute inset-0 bg-pure-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8">
+                  <div className="absolute inset-0 bg-pure-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 z-20">
                     <p className="text-gold text-xs font-sans tracking-widest uppercase font-bold mb-1 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                       View Details &amp; Gallery
                     </p>
@@ -360,15 +1034,21 @@ export default function Projects() {
 
               {/* Image box frame */}
               <div className="bg-pure-black max-h-[60vh] md:max-h-[70vh] aspect-video w-full overflow-hidden flex items-center justify-center relative">
+                {/* Blurred background */}
+                <img
+                  src={selectedProject.images[activeImageIndex]}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-105 pointer-events-none"
+                />
+                {/* Sharp foreground image */}
                 <img
                   src={selectedProject.images[activeImageIndex]}
                   alt={`${selectedProject.title} - Space Frame ${activeImageIndex + 1}`}
-                  className="max-w-full max-h-full object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="relative z-10 w-full h-full object-contain"
                 />
                 
                 {/* Visual Image Pagination trackers */}
-                <div className="absolute bottom-4 left-4 bg-pure-black/80 px-3 py-1 font-sans text-[11px] text-[#C4C4C2] rounded-none tracking-widest">
+                <div className="absolute bottom-4 left-4 bg-pure-black/80 px-3 py-1 font-sans text-[11px] text-[#C4C4C2] rounded-none tracking-widest z-20">
                   {activeImageIndex + 1} / {selectedProject.images.length}
                 </div>
               </div>
