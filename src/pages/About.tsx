@@ -178,7 +178,7 @@ export default function About() {
               },
               {
                 title: "Quality & Values",
-                desc: "Established in 2003, Swapnakar maintains high values and quality as a non-negotiable attribute, with Architect, Vaastu, Safety and Interior Designing integrated into every assignment.",
+                desc: "Established in 2000, Swapnakar maintains high values and quality as a non-negotiable attribute, with Architect, Vaastu, Safety and Interior Designing integrated into every assignment.",
               },
               {
                 title: "Client Satisfaction",

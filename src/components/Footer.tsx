@@ -45,7 +45,7 @@ export function Footer() {
             </div>
           </div>
           <p className="font-serif text-[#C4C4C2] italic text-sm md:text-base pr-4">
-            "SWAPNAKAR — Building Dreams Since 2003"
+            "SWAPNAKAR — Building Dreams Since 2000"
           </p>
           <p className="text-xs text-[#9A9A9A] font-sans leading-relaxed pt-2">
             A confluence of Dream, Architect and Innovation — shaping homes, institutions, complexes and townships across Prayagraj and beyond.

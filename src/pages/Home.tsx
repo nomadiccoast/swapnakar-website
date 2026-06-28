@@ -289,73 +289,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: ACHIEVEMENTS TEASER */}
-      <section className="bg-white py-16 md:py-24 px-6 md:px-12 border-b border-[#F4F4F2]">
-        <div className="max-w-7xl mx-auto">
-          
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="space-y-3 mb-12"
-          >
-            <span className="text-[11px] font-sans tracking-[0.2em] text-mid-grey uppercase font-bold block">
-              RECOGNITION &amp; MILESTONES
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl text-[#1C1C1C] font-semibold">
-              Delivering True Spatial Excellence
-            </h2>
-          </motion.div>
 
-          {/* Grid of four big statistics numbers */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12"
-          >
-            {[
-              { label: "Years of Excellence", value: "20+" },
-              { label: "Portfolio Segments", value: "6+" },
-              { label: "Established", value: "2003" },
-              { label: "Client Queries", value: "Zero" }
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeInUp}
-                className="flex flex-col space-y-2 border-l border-gold/30 pl-6 py-4"
-              >
-                <div className="font-serif text-5xl md:text-6xl text-gold font-bold">
-                  {/* Custom animated numbers component */}
-                  <Counter value={stat.value} />
-                </div>
-                <span className="text-xs font-sans tracking-widest text-[#1C1C1C] uppercase font-bold">
-                  {stat.label}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mt-14 pt-6 border-t border-[#F4F4F2]"
-          >
-            <a
-              href="./achievements.html"
-              className="inline-flex items-center gap-2 group text-sm font-sans font-bold tracking-wider uppercase text-pure-black hover:text-gold transition-colors duration-300"
-            >
-              See All Achievements
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </motion.div>
-
-        </div>
-      </section>
 
       {/* SECTION 5: FEATURED PROJECTS TEASER */}
       <section className="bg-warm-grey py-16 md:py-24 px-6 md:px-12">

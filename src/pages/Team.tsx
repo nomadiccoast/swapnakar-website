@@ -122,8 +122,8 @@ const itemVariants = {
 export default function Team() {
   const row1 = TEAM_DATA.filter(m => ["team-1", "team-2"].includes(m.id));
   const row2 = TEAM_DATA.filter(m => ["team-4", "team-10", "team-11"].includes(m.id));
-  const row3 = TEAM_DATA.filter(m => ["team-3", "team-5", "team-6"].includes(m.id));
-  const row4 = TEAM_DATA.filter(m => ["team-7", "team-9", "team-12"].includes(m.id));
+  const row3 = TEAM_DATA.filter(m => ["team-3", "team-5", "team-7"].includes(m.id));
+  const row4 = TEAM_DATA.filter(m => ["team-6", "team-9", "team-12"].includes(m.id));
 
   const renderMemberCard = (member: TeamMember) => (
     <motion.div
