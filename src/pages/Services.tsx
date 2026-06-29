@@ -14,14 +14,14 @@ const SERVICES_DATA: Service[] = [
     title: "Planning",
     description: "A perfect planning is the foundation stone of future convenience, comfort and best management of space and people. An integration of aesthetic work with regulatory framework, results in best laid township and complexes. Blend of architect with the green technology is one of key element in all the projects of Swapnakar. Be it the world class facilities, hi-tech infrastructure, serene landscaping or an incredible layout, Swapnakar offers the best of services in the planning segment especially urban planning.",
     details: [],
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "./services/planning.jpg"
   },
   {
     id: "architecture",
     title: "Architecture",
     description: "Since ancient time till todays global age, the architect of numerous building and monuments have seen implausible changes. These were possible because of individuals creativity and innovation mixed with learning of past, ultimately shaping in best of architectural examples worldwide. Swapnakar has this soul of architect and being delivering results since its inception. Swapnakar believes that the balance between the five elements of creation i.e. Agni, Prithvi, Varun, Vayu and Vyom (APV3 ) need to be maintained in all the assignments and project it develops. Element of Vaastu is always a prime focal point of any project of Swapnakar. We have already erected residences, apartments, institutions, hospitals, towns, and complexes etc well in time with excellence.",
     details: [],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "./services/ext.jpg"
   },
   {
     id: "project-management",
@@ -32,7 +32,7 @@ const SERVICES_DATA: Service[] = [
       "Swapnakar believes in absolute professionalism. We don't work with contractors or the labourers, rather we always work with our skilled and professional partners, be it engineers, electricians, plumbers or masons.",
       "Right from our implementing partners to the clients, Swapanakar maintains a transparency in flow of information and procedures."
     ],
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "./services/project.jpg"
   },
   {
     id: "interior-designing",
@@ -41,21 +41,21 @@ const SERVICES_DATA: Service[] = [
     details: [
       "Through our interior designing, happiness from the roots of the heart is ensured output."
     ],
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "./services/int.jpg"
   },
   {
     id: "vastu-consultant",
     title: "Vaastu Consultants",
     description: "Peace of mind, happiness of heart and prosperity is sought by everyone. The environment today where there is a rush of time, the Vaastu elements bring some miraculous effects to ones living. Swapnakar specialty in Vaastu makes its project unique in its class.",
     details: [],
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "./services/vastu.jpg"
   },
   {
     id: "landscape-designing",
     title: "Landscape Design",
     description: "Open space doesn't mesmerise anyone if its landscaping is not done in appropriate way. Any best architect in the world has wonderful landscaping associated with the main erection. Garden, terrain, contour, pools, water bodies and a lot more could bring prodigious impact to the project. The perfect landscaping is service Swapnakar offers. From designing till developing we offer turnkey solutions for landscaping.",
     details: [],
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1000&h=700"
+    image: "./services/land1.jpeg"
   }
 ];
 
@@ -179,15 +179,35 @@ export default function Services() {
                   }`}
                 >
                   {/* SWAP IMAGE: service image */}
-                  <img
-                    src={service.image}
-                    alt={`${service.title} architectural visualization`}
-                    width={1000}
-                    height={700}
-                    loading="lazy"
-                    className="w-full h-full object-cover shadow-none transition-transform duration-500 hover:scale-[1.02]"
-                  />
-                  <div className="absolute inset-0 border border-gold/15 pointers-none" />
+                  {service.image.endsWith('int.jpg') ? (
+                    <>
+                      {/* Blurred background glow */}
+                      <img
+                        src={service.image}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-cover blur-md scale-105 opacity-50 select-none pointer-events-none"
+                      />
+                      {/* Sharp foreground image */}
+                      <img
+                        src={service.image}
+                        alt={`${service.title} architectural visualization`}
+                        width={1000}
+                        height={700}
+                        loading="lazy"
+                        className="relative z-10 w-full h-full object-contain shadow-none transition-transform duration-500 hover:scale-[1.02]"
+                      />
+                    </>
+                  ) : (
+                    <img
+                      src={service.image}
+                      alt={`${service.title} architectural visualization`}
+                      width={1000}
+                      height={700}
+                      loading="lazy"
+                      className="w-full h-full object-cover shadow-none transition-transform duration-500 hover:scale-[1.02]"
+                    />
+                  )}
+                  <div className="absolute inset-0 border border-gold/15 pointer-events-none z-20" />
                 </motion.div>
 
               </div>

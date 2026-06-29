@@ -65,9 +65,43 @@ export default function Achievements() {
              ], 
       caption: "Award" 
     },
-    
-    
-   
+    {
+      src: [
+        "./ach/L2.jpg",
+             ], 
+      caption: "Award" 
+    },
+    {
+      src: [
+        "./ach/L3.jpg",
+             ], 
+      caption: "Award" 
+    },
+    {
+      src: [
+        "./ach/L4.jpg",
+             ], 
+      caption: "Award" 
+    },
+   {
+      src: [
+        "./ach/L5.jpg",
+             ], 
+      caption: "Award" 
+    },
+    {
+      src: [
+        "./ach/O.jpg",
+             ], 
+      caption: "Award" 
+    },
+{
+      src: [
+        "./ach/A6.jpg",
+             ], 
+      caption: "Award" 
+    },
+
   ];
 
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);

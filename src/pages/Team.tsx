@@ -58,10 +58,10 @@ const TEAM_DATA: TeamMember[] = [
   },
   {
     id: "team-7",
-    name: "Shree Kant Kushwaha",
+    name: "Shri Kant Kushwaha",
     designation: "3D Visualizer",
     description: "Executing complex projects flawlessly on site. Ensuring seamless schedule workflows, cost management, and structural safety guidelines.",
-    image: "./PHOTOS/shri.jpg",
+    image: "./PHOTOS/shri2.jpeg",
     imageOffset: { x: "0px", y: "15px", scale: 1.25, position: "top" }
   },
   
@@ -120,10 +120,12 @@ const itemVariants = {
 };
 
 export default function Team() {
-  const row1 = TEAM_DATA.filter(m => ["team-1", "team-2"].includes(m.id));
-  const row2 = TEAM_DATA.filter(m => ["team-4", "team-10", "team-11"].includes(m.id));
-  const row3 = TEAM_DATA.filter(m => ["team-3", "team-5", "team-7"].includes(m.id));
-  const row4 = TEAM_DATA.filter(m => ["team-6", "team-9", "team-12"].includes(m.id));
+  const getRow = (ids: string[]) => ids.map(id => TEAM_DATA.find(m => m.id === id)).filter((m): m is TeamMember => !!m);
+
+  const row1 = getRow(["team-1", "team-2"]);
+  const row2 = getRow(["team-4", "team-10", "team-11"]);
+  const row3 = getRow(["team-7", "team-5", "team-3"]);
+  const row4 = getRow(["team-6", "team-9", "team-12"]);
 
   const renderMemberCard = (member: TeamMember) => (
     <motion.div

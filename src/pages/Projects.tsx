@@ -538,17 +538,7 @@ const PROJECTS_DATA: Project[] = [
     location: "",
     year: ""
   },
-  {
-    id: "7-residential",
-    title: "House",
-    category: "Residential",
-    images: [
-     "./RESIDENTIAL/7.jpg"
-    ],
-    description: "",
-    location: "",
-    year: ""
-  },
+  
   {
     id: "8-residential",
     title: "House",

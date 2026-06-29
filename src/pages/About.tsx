@@ -137,11 +137,7 @@ export default function About() {
             <p>
               After a long journey since 2000, we are now positioned among the leading architectural practitioners. Institutional, residential, educational, commercial, hospitality, leisure and healthcare projects are part of our overall portfolio.
             </p>
-
             <p>
-              Swapnakar is a team of experienced professionals having an in-depth understanding of the subject and absolute command over their work, which ultimately leaves clients with "Zero" queries. </p>
-
- <p>
               We know how to manage space, bring comfort and create appealing designs within the limits of the resources available with clients. The equation between clients' needs and luxury is always balanced and satisfied in the architectural solutions provided by Swapnakar.
             </p>
 
