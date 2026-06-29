@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(PHOTOS|ach|religious|hero|COMMERCIAL|INSTITUTIONAL|INTERIOR|RESIDENTIAL|media)/.*\\.(jpe?g|png|webp|svg|gif|mp4|webm)",
+      "source": "/(PHOTOS|ach|religious|hero|COMMERCIAL|INSTITUTIONAL|INTERIOR|RESIDENTIAL|media)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
