@@ -39,8 +39,8 @@ const PROJECTS_DATA: Project[] = [
     title: "Prayagraj Sports CLub",
     category: "Commercial",
     images: [
-      "./COMMERCIAL/sports-club.jpg",
       "./COMMERCIAL/sports-club1.jpg",
+      "./COMMERCIAL/sports-club.jpg",
     ],
     description: "Sports Club",
     location: "Civil Lines, Prayagraj",
